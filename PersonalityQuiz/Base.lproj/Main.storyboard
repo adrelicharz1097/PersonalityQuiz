@@ -35,6 +35,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eE1-4d-fti">
                                         <rect key="frame" x="84" y="34.5" width="151" height="30"/>
                                         <state key="normal" title="begin personality quiz"/>
+                                        <connections>
+                                            <action selector="beginButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCr-j3-Naz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -78,6 +81,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="b4Z-GP-icq" kind="presentation" identifier="resultSegue" id="Avf-4A-MVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,10 +99,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ssN-0L-Zp2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Lcq-Ir-P29"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsu-Zo-pVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="134"/>
+            <point key="canvasLocation" x="2001" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SEI-78-v0Y">
@@ -111,7 +118,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAM-SK-JBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2057" y="134"/>
+            <point key="canvasLocation" x="2639.1999999999998" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oc8-nc-Vsp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b4Z-GP-icq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fML-WH-nVn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A8l-dY-hNL" kind="relationship" relationship="rootViewController" id="0r3-eQ-sa8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgr-aa-6gE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="134"/>
         </scene>
     </scenes>
 </document>
