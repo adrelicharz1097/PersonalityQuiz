@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Questions View Controller-->
         <scene sceneID="Yf9-6s-LhM">
             <objects>
-                <viewController id="A8l-dY-hNL" sceneMemberID="viewController">
+                <viewController id="A8l-dY-hNL" customClass="QuestionsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4rW-wY-sf8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="2247" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Results-->
         <scene sceneID="SEI-78-v0Y">
             <objects>
-                <viewController id="GkZ-uR-5Bx" sceneMemberID="viewController">
+                <viewController id="GkZ-uR-5Bx" customClass="ResultsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="njC-aQ-HmK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,21 +133,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atM-06-cdD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Results" id="H2K-vA-iSQ">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Kh9-Pf-DzH">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pDE-21-bcO">
-                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Done"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,6 +141,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sSd-fO-nUX"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Results" id="EML-oF-BLx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="JQh-ep-bCO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mD0-1Y-zXi">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAM-SK-JBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
