@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -208,22 +209,38 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVG-QU-1Lg">
+                                <rect key="frame" x="20" y="84" width="335" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="maQ-Bw-pBe">
+                                <rect key="frame" x="16" y="645" width="343" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ssN-0L-Zp2" firstAttribute="bottom" secondItem="maQ-Bw-pBe" secondAttribute="bottom" constant="20" id="1HH-kZ-HdC"/>
                             <constraint firstItem="JFy-z8-Zi9" firstAttribute="leading" secondItem="ssN-0L-Zp2" secondAttribute="leading" constant="20" id="2sd-GK-kBP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="maQ-Bw-pBe" secondAttribute="trailing" id="6sr-su-yC1"/>
                             <constraint firstItem="3rC-nF-rvy" firstAttribute="top" secondItem="ssN-0L-Zp2" secondAttribute="top" constant="180" id="7mB-aa-4Wv"/>
                             <constraint firstItem="ssN-0L-Zp2" firstAttribute="trailing" secondItem="3rC-nF-rvy" secondAttribute="trailing" constant="30" id="GvQ-Ru-Pmi"/>
                             <constraint firstItem="PEC-HQ-UZX" firstAttribute="centerY" secondItem="4rW-wY-sf8" secondAttribute="centerY" id="HV5-Ap-VBR"/>
+                            <constraint firstItem="MVG-QU-1Lg" firstAttribute="top" secondItem="ssN-0L-Zp2" secondAttribute="top" constant="20" id="OTB-Np-Sqi"/>
+                            <constraint firstItem="maQ-Bw-pBe" firstAttribute="leading" secondItem="4rW-wY-sf8" secondAttribute="leadingMargin" id="QTZ-Lf-HI0"/>
                             <constraint firstItem="PEC-HQ-UZX" firstAttribute="leading" secondItem="ssN-0L-Zp2" secondAttribute="leading" constant="20" id="Vjt-AR-yvk"/>
                             <constraint firstItem="3rC-nF-rvy" firstAttribute="leading" secondItem="ssN-0L-Zp2" secondAttribute="leading" constant="30" id="YtH-R8-bxj"/>
+                            <constraint firstItem="MVG-QU-1Lg" firstAttribute="leading" secondItem="ssN-0L-Zp2" secondAttribute="leading" constant="20" id="iJO-oq-iXQ"/>
                             <constraint firstItem="JFy-z8-Zi9" firstAttribute="centerY" secondItem="4rW-wY-sf8" secondAttribute="centerY" id="jln-re-S9s"/>
+                            <constraint firstItem="ssN-0L-Zp2" firstAttribute="trailing" secondItem="MVG-QU-1Lg" secondAttribute="trailing" constant="20" id="mUs-Xp-011"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssN-0L-Zp2"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="PEC-HQ-UZX"/>
                                 <exclude reference="3rC-nF-rvy"/>
+                                <exclude reference="JFy-z8-Zi9"/>
                             </mask>
                         </variation>
                     </view>
