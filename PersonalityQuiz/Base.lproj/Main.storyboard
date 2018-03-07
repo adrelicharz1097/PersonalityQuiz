@@ -289,7 +289,7 @@
                     <navigationItem key="navigationItem" title="Results" id="EML-oF-BLx">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="JQh-ep-bCO">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mD0-1Y-zXi">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <rect key="frame" x="322" y="7" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                             </button>
