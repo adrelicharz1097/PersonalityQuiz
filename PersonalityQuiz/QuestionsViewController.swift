@@ -9,6 +9,13 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
+    
+    @IBOutlet weak var rangeStackView: UIStackView!
+    @IBOutlet weak var multipleStackView: UIStackView!
+    @IBOutlet weak var singleStackView: UIStackView!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var questionLabel: UILabel!
+    
     var questionIndex = 0
     var question: [Question] = [
         Question(text: "Which food do you like the most?",
