@@ -15,9 +15,30 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var singleStackView: UIStackView!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
+ 
+    @IBOutlet weak var singleButtonOne: UIButton!
+    @IBOutlet weak var singleButtonTwo: UIButton!
+    @IBOutlet weak var singleButtonThree: UIButton!
+    @IBOutlet weak var singleButtonFour: UIButton!
+    
+    @IBOutlet weak var multipleLabelOne: UILabel!
+    @IBOutlet weak var multipleSwitchOne: UISwitch!
+    
+    @IBOutlet weak var multipleLabelTwo: UILabel!
+    @IBOutlet weak var multipleSwitchTwo: UISwitch!
+    
+    @IBOutlet weak var multipleLabelThree: UILabel!
+    @IBOutlet weak var multipleSwitchThree: UISwitch!
+    
+    @IBOutlet weak var multipleLabelFour: UILabel!
+    @IBOutlet weak var multipleSwitchFour: UISwitch!
+    
+    @IBOutlet weak var rangeSlider: UISlider!
+    @IBOutlet weak var rangeLabelOne: UILabel!
+    @IBOutlet weak var rangeLabelTwo: UILabel!
     
     var questionIndex = 0
-    var question: [Question] = [
+    var questions: [Question] = [
         Question(text: "Which food do you like the most?",
                  type: .single, answers:[
                     Answer(text: "Steak", type: .dog),
@@ -46,10 +67,26 @@ class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
 
+    func updateUI() {
+        singleStackView.isHidden = true
+        multipleStackView.isHidden = true
+        rangeStackView.isHidden = true
+        
+        let currentQuestion = questions[questionIndex]
+        let currentAnswers = currentQuestion.answers
+        
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+        
+        navigationItem.title = "Question #\(questionIndex + 1)"
+        questionLabel.text = currentQuestion.text
+        progressView.setProgress(totalProgress, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

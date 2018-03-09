@@ -185,13 +185,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JFy-z8-Zi9">
-                                <rect key="frame" x="20" y="298.5" width="170" height="70.5"/>
+                                <rect key="frame" x="20" y="298.5" width="174" height="70.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tLp-98-GBB">
-                                        <rect key="frame" x="-2" y="0.0" width="174" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="178" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JW0-OP-ytu">
-                                        <rect key="frame" x="0.0" y="50" width="170" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="174" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtR-Vc-iAR">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -200,7 +200,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlH-VJ-Mav">
-                                                <rect key="frame" x="128" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="132" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -239,10 +239,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="Lcq-Ir-P29"/>
                     <connections>
+                        <outlet property="multipleLabelFour" destination="Faj-hh-fcl" id="yae-PP-una"/>
+                        <outlet property="multipleLabelOne" destination="nRx-98-aRF" id="2Me-FM-X4m"/>
+                        <outlet property="multipleLabelThree" destination="X79-R0-M5e" id="UuS-4M-6Sq"/>
+                        <outlet property="multipleLabelTwo" destination="bSl-G7-YTC" id="L0T-Tv-pCE"/>
                         <outlet property="multipleStackView" destination="3rC-nF-rvy" id="Ihf-8Q-CGw"/>
+                        <outlet property="multipleSwitchFour" destination="jhf-d8-pr6" id="eCr-C4-CxW"/>
+                        <outlet property="multipleSwitchOne" destination="A3F-ja-U2c" id="mM9-Ay-mbo"/>
+                        <outlet property="multipleSwitchThree" destination="wIl-RZ-26b" id="d6J-ZQ-IxV"/>
+                        <outlet property="multipleSwitchTwo" destination="gDN-Ic-Vpi" id="Ay8-WU-XEf"/>
                         <outlet property="progressView" destination="maQ-Bw-pBe" id="VVb-SU-m8z"/>
                         <outlet property="questionLabel" destination="MVG-QU-1Lg" id="Le6-Nz-4Vc"/>
+                        <outlet property="rangeLabelOne" destination="dtR-Vc-iAR" id="0KH-pH-HRk"/>
+                        <outlet property="rangeLabelTwo" destination="UlH-VJ-Mav" id="BMm-lR-yAb"/>
+                        <outlet property="rangeSlider" destination="tLp-98-GBB" id="Crt-GM-tLn"/>
                         <outlet property="rangeStackView" destination="JFy-z8-Zi9" id="3c3-88-G5v"/>
+                        <outlet property="singleButtonFour" destination="ATN-1M-RKI" id="zcj-bU-R7a"/>
+                        <outlet property="singleButtonOne" destination="4U2-p8-lYP" id="4de-dp-FyC"/>
+                        <outlet property="singleButtonThree" destination="qdM-4f-xmh" id="QE6-ih-SDX"/>
+                        <outlet property="singleButtonTwo" destination="snt-FP-8Va" id="nY5-wn-9kH"/>
                         <outlet property="singleStackView" destination="PEC-HQ-UZX" id="7LG-LM-dRo"/>
                         <segue destination="GkZ-uR-5Bx" kind="show" id="Vk4-KZ-sgM"/>
                     </connections>
