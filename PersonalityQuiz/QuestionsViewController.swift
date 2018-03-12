@@ -87,6 +87,28 @@ class QuestionsViewController: UIViewController {
         progressView.setProgress(totalProgress, animated: true)
     }
     
+    func updateSingleStack (using answers: [Answer]) {
+        singleStackView.isHidden = false
+        singleButtonOne.setTitle(answers[0].text, for: .normal)
+        singleButtonTwo.setTitle(answers[1].text, for: .normal)
+        singleButtonThree.setTitle(answers[2].text, for: .normal)
+        singleButtonFour.setTitle(answers[3].text, for: .normal)
+    }
+    
+    func updateMultipleStack (using answers: [Answer]) {
+        multipleStackView.isHidden = false
+        multipleLabelOne.text = answers[0].text
+        multipleLabelTwo.text = answers[1].text
+        multipleLabelThree.text = answers[2].text
+        multipleLabelFour.text = answers[3].text
+    }
+    
+    func updateRangedStack (using answers: [Answer]) {
+        rangeStackView.isHidden = false
+        rangeLabelOne.text = answers.first?.text
+        rangeLabelTwo.text = answers.last?.text
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
