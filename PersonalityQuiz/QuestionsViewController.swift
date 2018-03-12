@@ -96,6 +96,15 @@ class QuestionsViewController: UIViewController {
         }
     }
     
+    func nextQuestion() {
+        questionIndex += 1
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+          performSegue(withIdentifier: "resultSegue", sender: nil)
+        }
+    }
+    
     func updateSingleStack (using answers: [Answer]) {
         singleStackView.isHidden = false
         singleButtonOne.setTitle(answers[0].text, for: .normal)
