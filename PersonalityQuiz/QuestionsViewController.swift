@@ -10,6 +10,8 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
+    var answersChosen: [Answer] = []
+    
     @IBOutlet weak var rangeStackView: UIStackView!
     @IBOutlet weak var multipleStackView: UIStackView!
     @IBOutlet weak var singleStackView: UIStackView!
@@ -130,6 +132,24 @@ class QuestionsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+        let currentAnswers = questions[questionIndex].answers
+        
+        switch sender {
+        case singleButtonOne:
+            answersChosen.append(currentAnswers[0])
+        case singleButtonTwo:
+            answersChosen.append(currentAnswers[1])
+        case singleButtonThree:
+            answersChosen.append(currentAnswers[2])
+        case singleButtonFour:
+            answersChosen.append(currentAnswers[3])
+        default:
+            break
+        }
+        nextQuestion()
     }
     
 }
