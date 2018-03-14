@@ -134,6 +134,7 @@ class QuestionsViewController: UIViewController {
         
     }
     
+    
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
         
@@ -151,5 +152,25 @@ class QuestionsViewController: UIViewController {
         }
         nextQuestion()
     }
+    @IBAction func multipleAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+        
+        if multipleSwitchOne.isOn {
+            answersChosen.append(currentAnswers[0])
+        }
+        if multipleSwitchTwo.isOn {
+            answersChosen.append(currentAnswers[1])
+        }
+        if multipleSwitchThree.isOn {
+            answersChosen.append(currentAnswers[2])
+        }
+        if multipleSwitchFour.isOn {
+            answersChosen.append(currentAnswers[3])
+        }
+        nextQuestion()
+        
+        
+    }
+    
     
 }
