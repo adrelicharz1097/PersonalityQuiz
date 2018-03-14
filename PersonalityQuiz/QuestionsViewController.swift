@@ -61,7 +61,7 @@ class QuestionsViewController: UIViewController {
              type: .ranged, answers:[
                 Answer(text: "I dislike them", type: .cat),
                 Answer(text: "I get a little nervous", type: .rabbit),
-                Answer(text: "I barely notic them", type: .turtle),
+                Answer(text: "I barely notice them", type: .turtle),
                 Answer(text: "I love them", type: .dog)
         ])
     ]
@@ -117,6 +117,10 @@ class QuestionsViewController: UIViewController {
     
     func updateMultipleStack (using answers: [Answer]) {
         multipleStackView.isHidden = false
+        multipleSwitchOne.isOn = false
+        multipleSwitchTwo.isOn = false
+        multipleSwitchThree.isOn = false
+        multipleSwitchFour.isOn = false
         multipleLabelOne.text = answers[0].text
         multipleLabelTwo.text = answers[1].text
         multipleLabelThree.text = answers[2].text
@@ -125,6 +129,7 @@ class QuestionsViewController: UIViewController {
     
     func updateRangedStack (using answers: [Answer]) {
         rangeStackView.isHidden = false
+        rangeSlider.setValue(0.5, animated: false)
         rangeLabelOne.text = answers.first?.text
         rangeLabelTwo.text = answers.last?.text
     }
@@ -167,10 +172,18 @@ class QuestionsViewController: UIViewController {
         if multipleSwitchFour.isOn {
             answersChosen.append(currentAnswers[3])
         }
-        nextQuestion()
         
+        nextQuestion()
         
     }
     
+    @IBAction func rangedAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+        let index = Int(round(rangeSlider.value * Float(currentAnswers.count - 1)))
+        answersChosen.append(currentAnswers[index])
+        
+        nextQuestion()
+        
+    }
     
 }

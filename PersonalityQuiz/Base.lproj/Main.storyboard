@@ -200,13 +200,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JFy-z8-Zi9">
-                                <rect key="frame" x="20" y="298.5" width="186" height="70.5"/>
+                                <rect key="frame" x="20" y="273.5" width="206" height="120.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tLp-98-GBB">
-                                        <rect key="frame" x="-2" y="0.0" width="190" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="210" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JW0-OP-ytu">
-                                        <rect key="frame" x="0.0" y="50" width="186" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="206" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtR-Vc-iAR">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -215,13 +215,20 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlH-VJ-Mav">
-                                                <rect key="frame" x="144" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="164" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm0-TR-ksW">
+                                        <rect key="frame" x="0.0" y="90.5" width="206" height="30"/>
+                                        <state key="normal" title="Submit Answers"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="A8l-dY-hNL" eventType="touchUpInside" id="oYd-eM-BVg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVG-QU-1Lg">
@@ -251,12 +258,6 @@
                             <constraint firstItem="3rC-nF-rvy" firstAttribute="leading" secondItem="ssN-0L-Zp2" secondAttribute="leading" constant="20" id="xkh-Fb-ry5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssN-0L-Zp2"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="PEC-HQ-UZX"/>
-                                <exclude reference="JFy-z8-Zi9"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Lcq-Ir-P29"/>
                     <connections>
